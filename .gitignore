@@ -1,23 +1,6 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+/.idea/
+/oauth2-authorization-code/authorization-server/authorization-server.iml
+/oauth2-authorization-code/resource-server/resource-server.iml
+/oauth2-authorization-code/oauth2-authorization-code.iml
+/oauth2-authorization-code/authorization-server/target/
+/oauth2-authorization-code/resource-server/target/
