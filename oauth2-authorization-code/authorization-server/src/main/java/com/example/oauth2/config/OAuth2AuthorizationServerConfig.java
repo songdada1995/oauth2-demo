@@ -68,7 +68,7 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
                 .resourceIds("oauth2-resource")
                 // 可授权的 Scope
                 .scopes("read_userinfo", "read_contacts")
-                // 配置回调地址，选填
+                // 配置回调地址
                 .redirectUris(redirectUri)
                 //配置访问token的有效期
                 .accessTokenValiditySeconds(2 * 60 * 60)
