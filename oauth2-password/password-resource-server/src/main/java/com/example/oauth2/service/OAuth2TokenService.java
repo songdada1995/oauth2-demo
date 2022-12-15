@@ -42,30 +42,13 @@ public class OAuth2TokenService {
         HashMap<String, String> headers = new HashMap<>();
         headers.put("Authorization", buildAuthorization(clientId, clientSecret));
         // 请求参数
-        Map<String, String> paramMap = new HashMap<>();
+        Map<String, Object> paramMap = new HashMap<>();
         paramMap.put("grant_type", "password");
         paramMap.put("username", username);
         paramMap.put("password", password);
-        // 构建请求体
-        RequestBody requestBody = OkHttpUtil.buildRequestBody(OkHttpUtil.MEDIA_TYPE_FORM_URLENCODED, paramMap);
 
-        Request request = new Request.Builder()
-                .url(accessTokenUri)
-                .headers(headers == null ? new Headers.Builder().build() : Headers.of(headers))
-                .post(requestBody)
-                .build();
-        Response response = OkHttpUtil.getClient().newCall(request).execute();
-        if (response == null) {
-            return null;
-        }
-        ResponseBody responseBody = response.body();
-        if (responseBody == null) {
-            return null;
-        }
-        String bodyString = responseBody.string();
-        if (StringUtils.isBlank(bodyString)) {
-            return null;
-        }
+        String bodyString = OkHttpUtil.executePostOkHttpApi(accessTokenUri, headers,
+                OkHttpUtil.buildRequestBody(OkHttpUtil.MEDIA_TYPE_FORM_URLENCODED, paramMap));
         log.info("callbackToken调用api返回:{}", bodyString);
         return bodyString;
     }
