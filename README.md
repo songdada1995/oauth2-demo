@@ -4,11 +4,12 @@
 oauth2-demo
 ~~~
 ├── oauth2-authorization-code             // 授权码模式
-│       └── authorization-server                     // 认证服务器
-│       └── resource-server                          // 资源服务器
+│       └── authorization-code-authorization-server           // 认证服务器
+│       └── authorization-code-resource-server                // 资源服务器
 ├───pom.xml                               // 公共依赖
-├── oauth2-client-credentials             // 客户端凭证模式
-│       └── authorization-server                     // 认证服务器
+├── oauth2-password                       // 密码模式
+│       └── password-authorization-server                     // 认证服务器
+│       └── password-resource-server                          // 资源服务器
 ├───pom.xml                               // 公共依赖
 ~~~
 
@@ -41,3 +42,15 @@ http://127.0.0.1:9090/oauth/authorize?client_id=clientapp&redirect_uri=http://12
 并添加header，{"Authorization" : "Bearer access_token"}
 例如：{"Authorization" : "Bearer 98a2d932-3bea-4c11-924a-a0bfe16c17ed"}
 即可调通接口
+
+
+## 密码模式
+
+### 1. 访问http://localhost:9091/login/token?username=test&password=123456
+即可拿到token
+
+### 2. 再次访问http://localhost:9091/permit_demo
+并添加header，{"Authorization" : "Bearer access_token"}
+例如：{"Authorization" : "Bearer 98a2d932-3bea-4c11-924a-a0bfe16c17ed"}
+即可调通接口
+

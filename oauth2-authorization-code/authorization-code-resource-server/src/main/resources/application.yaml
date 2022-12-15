@@ -13,7 +13,8 @@ security:
       client-secret: 112233
     # OAuth2 Resource 配置，对应 ResourceServerProperties 类
     resource:
-      token-info-uri: http://127.0.0.1:9090/oauth/check_token # 获得 Token 信息的 URL
+      # token有效性检查
+      token-info-uri: http://127.0.0.1:9090/oauth/check_token
       resourceId-id: oauth2-resource
     # 获取访问令牌URL
     access-token-uri: http://127.0.0.1:9090/oauth/token
