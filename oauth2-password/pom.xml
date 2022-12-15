@@ -5,12 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>oauth2-authorization-code</artifactId>
+    <artifactId>oauth2-password</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
-        <module>authorization-code-authorization-server</module>
-        <module>authorization-code-resource-server</module>
+        <module>password-authorization-server</module>
+        <module>password-resource-server</module>
     </modules>
 
     <properties>

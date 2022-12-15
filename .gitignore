@@ -1,6 +1,11 @@
 /.idea/
-/oauth2-authorization-code/authorization-server/authorization-server.iml
-/oauth2-authorization-code/resource-server/resource-server.iml
+/oauth2-authorization-code/authorization-code-authorization-server/authorization-code-authorization-server.iml
+/oauth2-authorization-code/authorization-code-resource-server/authorization-code-resource-server.iml
 /oauth2-authorization-code/oauth2-authorization-code.iml
-/oauth2-authorization-code/authorization-server/target/
-/oauth2-authorization-code/resource-server/target/
+/oauth2-authorization-code/authorization-code-authorization-server/target/
+/oauth2-authorization-code/authorization-code-resource-server/target/
+/oauth2-password/password-authorization-server/password-authorization-server.iml
+/oauth2-password/password-resource-server/password-resource-server.iml
+/oauth2-password/oauth2-password.iml
+/oauth2-password/password-authorization-server/target/
+/oauth2-password/password-resource-server/target/
