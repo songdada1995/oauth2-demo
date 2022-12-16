@@ -17,10 +17,6 @@ public class OAuth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                // 设置 /login 无需权限访问
-                .antMatchers("/login").permitAll()
-                // 设置 /client-login 无需权限访问
-                .antMatchers("/client-login").permitAll()
                 /// 设置 /oauth2_token/** 无需权限访问
                 .antMatchers("/oauth2_token/**").permitAll()
                 // 设置 /example/** 无需授权，即可访问

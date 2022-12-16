@@ -1,7 +1,6 @@
 package com.example.oauth2.utils;
 
 import com.alibaba.fastjson.JSONObject;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.*;
 import org.apache.commons.collections4.MapUtils;
@@ -43,26 +42,18 @@ public class OkHttpUtil {
         return okHttpClient;
     }
 
-    public static MediaType getJsonMediaType() {
-        return MediaType.parse("application/json");
-    }
-
     /**
      * 构建请求体
      *
      * @param mediaType
      * @param formParam
      * @return
-     * @throws JsonProcessingException
      */
-    public static RequestBody buildRequestBody(String mediaType, Map<String, Object> formParam) throws JsonProcessingException {
+    public static RequestBody buildRequestBody(String mediaType, Map<String, Object> formParam) {
         switch (mediaType) {
             case MEDIA_TYPE_JSON:
-                if (MapUtils.isNotEmpty(formParam)) {
-                    RequestBody.create("", null);
-                }
-                String content = JSONObject.toJSONString(formParam);
-                return RequestBody.create(content, getJsonMediaType());
+                String content = MapUtils.isEmpty(formParam) ? "" : JSONObject.toJSONString(formParam);
+                return RequestBody.create(content, MediaType.parse("application/json"));
 
             case MEDIA_TYPE_FORM:
                 MultipartBody.Builder formBuilder = new MultipartBody.Builder().setType(MultipartBody.FORM);
