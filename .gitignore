@@ -9,3 +9,13 @@
 /oauth2-password/oauth2-password.iml
 /oauth2-password/password-authorization-server/target/
 /oauth2-password/password-resource-server/target/
+/oauth2-client-credentials/oauth2-client-credentials.iml
+/oauth2-client-credentials/client-credentials-authorization-server/client-credentials-authorization-server.iml
+/oauth2-client-credentials/client-credentials-resource-server/client-credentials-resource-server.iml
+/oauth2-client-credentials/client-credentials-authorization-server/target/
+/oauth2-client-credentials/client-credentials-resource-server/target/
+/oauth2-implicit/implicit-authorization-server/implicit-authorization-server.iml
+/oauth2-implicit/implicit-authorization-server/target/
+/oauth2-implicit/implicit-resource-server/implicit-resource-server.iml
+/oauth2-implicit/implicit-resource-server/target/
+/oauth2-implicit/oauth2-implicit.iml

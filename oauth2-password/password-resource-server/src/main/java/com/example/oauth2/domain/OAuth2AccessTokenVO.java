@@ -28,4 +28,10 @@ public class OAuth2AccessTokenVO implements Serializable {
     private String error;
     @SerializedName("error_description")
     private String errorDescription;
+    @SerializedName("timestamp")
+    private String timestamp;
+    @SerializedName("status")
+    private String status;
+    @SerializedName("path")
+    private String path;
 }

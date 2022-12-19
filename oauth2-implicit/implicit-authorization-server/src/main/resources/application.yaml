@@ -1,0 +1,15 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: implicit-authorization-server
+
+security:
+  oauth2:
+    # OAuth2 Client 配置，对应 OAuth2ClientProperties 类
+    client:
+      client-id: clientapp
+      client-secret: 112233
+    # 授权后重定向地址
+    redirect_uri: http://127.0.0.1:9091/login/callback
