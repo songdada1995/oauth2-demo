@@ -38,13 +38,13 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
         clients.inMemory()
                 .withClient(clientId)
                 .secret(passwordEncoder().encode(clientSecret))
-                // 授权码模式
+                // 客户端凭证模式
                 .authorizedGrantTypes("client_credentials")
                 .authorities("READ_ONLY_CLIENT")
                 .resourceIds("oauth2-resource")
                 // 可授权的 Scope
                 .scopes("read_userinfo", "read_contacts")
-                //配置访问token的有效期
+                // 配置访问token的有效期
                 .accessTokenValiditySeconds(30 * 60);
     }
 

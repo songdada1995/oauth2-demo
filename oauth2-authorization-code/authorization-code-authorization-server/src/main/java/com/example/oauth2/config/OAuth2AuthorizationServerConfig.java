@@ -70,9 +70,9 @@ public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigur
                 .scopes("read_userinfo", "read_contacts")
                 // 配置回调地址
                 .redirectUris(redirectUri)
-                //配置访问token的有效期
+                // 配置访问token的有效期
                 .accessTokenValiditySeconds(2 * 60 * 60)
-                //配置刷新token的有效期
+                // 配置刷新token的有效期
                 .refreshTokenValiditySeconds(30 * 24 * 60 * 60);
     }
 
